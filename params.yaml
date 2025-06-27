@@ -1,0 +1,7 @@
+RandomForest:
+  n_estimators: 300
+  min_samples_split: 7
+  min_samples_leaf: 6
+  max_depth: 10
+  criterion: entropy
+ 

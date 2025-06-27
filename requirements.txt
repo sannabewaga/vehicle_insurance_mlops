@@ -19,4 +19,18 @@ python-multipart
 uvicorn
 jinja2
 imblearn
+pandas 
+mlflow
+notebook
+numpy
+scikit-learn
+matplotlib
+python-box
+pyYAML
+tqdm
+ensure
+joblib
+types-PyYAML
+Flask
+Flask-Cors
 # -e .
