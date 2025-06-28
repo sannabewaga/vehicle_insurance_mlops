@@ -3,6 +3,7 @@ from src.datascience.components.data_ingestion import DataIngestion
 from src.datascience.config.configuration import ConfigurationManager
 from src.datascience.components.data_validation import DataValidation
 from src.datascience.components.model_trainer import ModelTrainer
+from src.datascience.components.model_evaluation import ModelEvaluation
 from src.datascience.components.data_transformation import DataTransformation
 
 
@@ -26,7 +27,11 @@ config = ConfigurationManager()
 # dt.run()
 
 
-model_trainer_config = config.get_model_trainer_config()
+# model_trainer_config = config.get_model_trainer_config()
 
-mt= ModelTrainer(model_trainer_config)
-mt.run()
+# mt= ModelTrainer(model_trainer_config)
+# mt.run()
+
+model_evaluation_config = config.get_model_evaluation_config()
+me = ModelEvaluation(model_evaluation_config)
+me.run()
