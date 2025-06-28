@@ -20,8 +20,9 @@ class ModelTrainer:
             test = pd.read_csv(self.config.test_data_path)
 
             # Split into features and target
-            x_train = train.drop(columns=[self.config.target_column])
-            y_train = train[self.config.target_column]
+            x_train = train.drop(columns=[self.config.target_column, "id"], errors="ignore")
+            x_test = test.drop(columns=[self.config.target_column, "id"], errors="ignore")
+
 
             x_test = test.drop(columns=[self.config.target_column])
             y_test = test[self.config.target_column]

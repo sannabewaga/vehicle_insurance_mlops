@@ -43,3 +43,9 @@ class ModelEvaluationConfig:
     metric_file_name: Path
     target_column: str
     mlflow_uri: str
+
+from dataclasses import dataclass
+
+@dataclass
+class ModelPredictionConfig:
+    model_path: str

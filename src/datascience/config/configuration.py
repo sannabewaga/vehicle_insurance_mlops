@@ -1,6 +1,6 @@
 from src.datascience.constants import *
 from src.datascience.utils.common import *
-from src.datascience.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig,ModelEvaluationConfig
+from src.datascience.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig,ModelTrainerConfig,ModelEvaluationConfig,ModelPredictionConfig
 
 
 class ConfigurationManager:
@@ -88,3 +88,9 @@ class ConfigurationManager:
             mlflow_uri="https://dagshub.com/sannabewaga/vehicle_insurance_mlops.mlflow"
             )
     
+
+    def get_model_prediction_config(self) -> ModelPredictionConfig:
+        config = self.config.model_evaluation  # Reuse existing config
+        return ModelPredictionConfig(
+            model_path=config.model_path
+        )
